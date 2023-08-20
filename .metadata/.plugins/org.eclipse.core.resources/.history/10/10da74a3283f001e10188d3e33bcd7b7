@@ -1,0 +1,33 @@
+package com.springcore.autowire.annotation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Student {
+	
+	
+	private Person p1;
+	 
+	public Person getP1() {
+		return p1;
+	}
+	@Autowired 
+	public void setP1(Person p1) {
+		System.out.println("setting value");
+		this.p1 = p1;
+	}
+	public Student(int roll, Person p1) {
+		super();
+		 
+		this.p1 = p1;
+	}
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Override
+	public String toString() {
+		System.out.println("this is constructor....");
+		return  "Studnet[ person: "+p1+" ]";
+	}
+
+}

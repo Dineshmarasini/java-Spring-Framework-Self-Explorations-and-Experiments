@@ -1,0 +1,8 @@
+package com.springcore.collection;
+import org.springframework.context.ApplicationContext;
+
+public class Test {
+	ApplicationContext context= new ClassPathXmlApplicationContext("collectionConfig.xml");
+	Emp employee=context.getBean()
+
+}

@@ -1,0 +1,12 @@
+package com.springcore.lifecycle;
+
+public class TestSamosa {
+
+	public static void main(String[] args) { 
+		// TODO Auto-generated method stub
+		
+		ApplicationContext context=new ClassPathXmlApplicationContext("com/springcore/lifecycle/lifecycleConfig.xml");
+
+	}
+
+}

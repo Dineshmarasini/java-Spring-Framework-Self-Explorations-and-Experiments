@@ -1,0 +1,23 @@
+package com.springcore.lifecycle;
+
+import java.security.PublicKey;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestSamosa {
+
+	public static void main(String[] args) { 
+		// TODO Auto-generated method stub
+		
+		AbstractApplicationContext context=new ClassPathXmlApplicationContext("com/springcore/lifecycle/lifecycleConfig.xml");
+		Samosa s=(Samosa)context.getBean("samosa1");
+		System.out.println(s);
+		context.registerShutdownHook();
+;		
+	    
+	
+
+	}
+
+}

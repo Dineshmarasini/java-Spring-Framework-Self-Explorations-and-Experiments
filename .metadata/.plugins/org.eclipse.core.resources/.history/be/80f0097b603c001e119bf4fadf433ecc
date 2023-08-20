@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">-->
+<!--<properties/>-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          https://www.springframework.org/schema/beans/spring-beans.xsd
+          https://www.springframework.org/schema/context
+          https://www.springframework.org/schema/spring-context.xsd">
+          
+          <bean>
+			  <property name="name"  value="Dinesh"/>
+			  <property name="phones">
+				  
+				  <list>
+					  <value>9841592421</value>
+					  <value>9847390006</value>
+					  <value>9847004989</value>
+				  </list>
+			  </property>
+			  
+			  
+			  <property name="addresses">
+				  <set>
+					  <value>Katmandu</value>
+					  <value>Gulmi</value>
+					  <value>Gulmi</value>
+				  </set>
+			  </property>
+			  
+			  <property name="courses">
+				  <map>
+					  <entry key="java"  value="50 days"/>
+					  <entry key="python" value="90 days"/>
+					  <entry key="spring" value="100 days"/>
+				  </map>
+			  </property>
+			  
+			  
+			  
+		  </bean>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+ </beans>
