@@ -13,9 +13,9 @@
         <!-- standalone List structure-->
         <util:list list-class="java.util.LinkedList" id="mybestfriend">
 			<value>dinesh</value>
-			<value>aastha</value>
-			<value>sushma</value>
-			<value>ajay</value>
+			<value>marasini</value>
+			<value>ram</value>
+			<value>alan</value>
 			
 		</util:list>
 		
