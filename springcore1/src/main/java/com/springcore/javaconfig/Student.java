@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
  
 
-@Component("student")
+ 
 public class Student {
 	private Samos samosa; 
 	
