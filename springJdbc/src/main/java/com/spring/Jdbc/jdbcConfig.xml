@@ -18,7 +18,7 @@
 			  <property name="password" value="dinesh"/>
 		  </bean>
           
-          <bean class="org.springframework.jdbc.core.jdbcTemplate" name="jdbcTemplate ">
+          <bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbcTemplate ">
 			  <property name="dataSource">
 				  <ref bean="ds" />
 			  </property>
@@ -28,7 +28,4 @@
 			  <property name="jdbcTemplate" ref="jdbcTemplate"/>
 			  
 		  </bean>
-          
-          
-          
           </beans>

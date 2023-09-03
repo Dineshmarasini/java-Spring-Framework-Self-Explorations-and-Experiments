@@ -18,14 +18,34 @@ public class App
     	ApplicationContext context=new ClassPathXmlApplicationContext("com/spring/jdbc/jdbcConfig.xml");
     	
     	StudentDao studentDao = context.getBean("studentDao",StudentDao.class);
+//    	
     	
-    	Student student=new Student();
-    	student.setId(666);
-    	student.setName("Rohit poudel");
-    	student.setCity("Kathmandu"); 
+    	//for Insert operation
+//    	Student student=new Student();
+//    	student.setId(666);
+//    	student.setName("Rohit poudel");
+//    	student.setCity("Kathmandu"); 
+//    	
+//    	int result=studentDao.insert(student);
+//    	System.out.println("result added:  " +result);
+//    	
     	
-    	int result=studentDao.insert(student);
-    	System.out.println("result added:  " +result);
+    	
+    	//for update operation
+//    	Student student=new Student();
+//    	student.setId(666);
+//    	student.setName("Sandeep lamichhane");
+//    	student.setCity("Syanja");
+//    	
+//    	int result=studentDao.change(student);
+//    	System.out.println("Successfully updated: "+result);
+    	
+    	
+    	//for Delete data
+//       int result=studentDao.delete(666);
+//       System.out.println("Successfully deleted: "+result);
+       
+    	
     	
 //    	JdbcTemplate temp=context.getBean("jdbcTemplate", JdbcTemplate.class);
     	
@@ -36,6 +56,11 @@ public class App
 ////                 fire query 	
 //    	int result=temp.update(query,333, "Kushal Bhurtel","butwal");
 //    	System.out.println("result updated: "+result);
+    	
+    	
+    	//for rowMapper to fetch the data
+    	Student student=studentDao.getStudent(222);
+    	System.out.println("here is the data: "+student); 
     	
     	
     	 
