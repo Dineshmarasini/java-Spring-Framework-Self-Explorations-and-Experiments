@@ -4,6 +4,7 @@ import java.security.Signature;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -18,18 +19,23 @@ public class App
 
 	public static void main( String[] args )
     { 
-    	ApplicationContext context=new ClassPathXmlApplicationContext("com/spring/jdbc/jdbcConfig.xml");
+		
+		//This is for XML configuration
+//    	ApplicationContext context=new ClassPathXmlApplicationContext("com/spring/jdbc/jdbcConfig.xml");
+		
+		//THIS IS FOR JAVA CONFIGURATION.
+		ApplicationContext context= new AnnotationConfigApplicationContext(jdbcConfig.class);
     	
     	StudentDao studentDao = context.getBean("studentDao",StudentDao.class);
 //    	
     	
     	//for Insert operation
-//    	Student student=new Student();
-//    	student.setId(777);
-//    	student.setName("Dipendra Sing Aireee");
-//    	student.setCity("Mahendranagar"); 
+    	Student student=new Student();
+    	student.setId(999);
+    	student.setName("Dipendra Sing Aireee");
+    	student.setCity("Mahendranagar"); 
 //    	
-//    	int result=studentDao.insert(student);
+    	int result=studentDao.insert(student);
 //    	System.out.println("result added:  " +result);
 //    	
     	
