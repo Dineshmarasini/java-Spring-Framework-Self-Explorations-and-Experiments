@@ -30,12 +30,12 @@ public class App
 //    	
     	
     	//for Insert operation
-    	Student student=new Student();
-    	student.setId(999);
-    	student.setName("Dipendra Sing Aireee");
-    	student.setCity("Mahendranagar"); 
-//    	
-    	int result=studentDao.insert(student);
+//    	Student student=new Student();
+//    	student.setId(919);
+//    	student.setName("Dipendra Sing Aireee");
+//    	student.setCity("Mahendranagar"); 
+//  	
+//    	int result=studentDao.insert(student);
 //    	System.out.println("result added:  " +result);
 //    	
     	

@@ -3,6 +3,7 @@ package com.spring.Jdbc;
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -11,6 +12,7 @@ import com.spring.Jdbc.dataOperation.StudentDao;
 import com.spring.Jdbc.dataOperation.StudentDaoImpl;
 
 @Configuration
+@ComponentScan(basePackages ={"com.spring.Jdbc.dataOperation"})
 
 public class jdbcConfig {
 	@Bean("ds")
@@ -32,14 +34,18 @@ public class jdbcConfig {
 		
 	}
 	
-	@Bean("studentDao")
-	public StudentDao getStudentDao() {
-		StudentDaoImpl studentDao=new StudentDaoImpl();
-		studentDao.setJdbcTemplate(geTemplate());
-		return studentDao;
-		
-		 
-	}
+	
+	
+	//Autowired and ComponentScan Annotation is used on top instead of this
+	
+//	@Bean("studentDao")
+//	public StudentDao getStudentDao() {
+//		StudentDaoImpl studentDao=new StudentDaoImpl();
+//		studentDao.setJdbcTemplate(geTemplate());
+//		return studentDao;
+//		
+//		 
+//	}
 	
 
 }
