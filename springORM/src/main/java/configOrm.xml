@@ -4,17 +4,14 @@
     xmlns:context="http://www.springframework.org/schema/context" 
      xmlns:p="http://www.springframework.org/schema/p"
      xmlns:tx="http://www.springframework.org/schema/tx"
-      xmlns:util="http://www.springframework.org/schema/util"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
-     http://www.springframework.org/schema/beans/spring-beans.xsd
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context.xsd
-        http://www.springframework.org/schema/util 
-        http://www.springframework.org/schema/util/spring-util.xsd
-         http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx 
         http://www.springframework.org/schema/tx/spring-tx.xsd">
         
-        <tx:annotation-driven />
+        <tx:annotation-driven/>
         
         
         <!-- Data source properties -->
@@ -36,7 +33,7 @@
 	         <props>
 				 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</prop>
 				 <prop key="hibernate.show_sql">true</prop>
-				 <prop key="hibernate.hbmddl.auto">update</prop>
+				 <prop key="hibernate.hbm2ddl.auto">update</prop>
 			 </props>
 			</property>
 			

@@ -18,8 +18,8 @@ public class App
         StudentDao studentDao=context.getBean("studentDao",StudentDao.class);
         
         Student student=new Student(123,"Hero Marasini","kathmandu");
-       int insert= studentDao.insert(student);
-       System.out.println("successfully inserted: "+insert);
+       int r= studentDao.insert(student);
+       System.out.println("successfully inserted: "+r);
         
     }
 }
