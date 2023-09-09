@@ -105,7 +105,18 @@ public class App
         	
         case 5:
         	//update student
-        	break;
+        	System.out.print("type in the id of student you want to update:");
+			int oldId = Integer.parseInt(bReader.readLine());
+			System.out.print("Enter new user name:");
+			String namee= bReader.readLine();
+			System.out.print("Enter new user city:");
+			String cityy= bReader.readLine();
+			studentDao.deleteStudent(oldId);
+			Student student3 = new Student(oldId, namee, cityy);
+			studentDao.insert(student3);
+			System.out.println("one row updated");
+			break;
+        	
         	
         case 6:
         	//exit
